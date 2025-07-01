@@ -1,4 +1,7 @@
-import { useState } from "react";
+// context
+import { useGame } from "@/context/GameContex";
+
+// components
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -10,9 +13,9 @@ import likesCyclingImg from "@/assets/likes_cycling.png";
 import bornInBangaloreImg from "@/assets/born_in_bangalore.png";
 import playsGuitarImg from "@/assets/plays_guitar.png";
 
+// Page
 export default function LandingPage() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const { playerInfo, setPlayerInfo } = useGame();
 
   return (
     <div className="phone-wrapper">
@@ -57,21 +60,20 @@ export default function LandingPage() {
       <div className="bottom-half-purple">
         <div className="bg-white w-[274px] h-[208px] rounded-[8px] gap-[16px] p-[16px] mx-auto flex flex-col justify-center">
           <Input
-            placeholder="First Name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            className="w-[240px] h-[48px] min-w-[240px] rounded-[8px] border border-input px-[16px] py-[12px]"
+            value={playerInfo.firstName}
+            onChange={(e) =>
+              setPlayerInfo({ ...playerInfo, firstName: e.target.value })
+            }
           />
+
           <Input
-            placeholder="Last Name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            className="w-[240px] h-[48px] min-w-[240px] rounded-[8px] border border-input px-[16px] py-[12px]"
+            value={playerInfo.lastName}
+            onChange={(e) =>
+              setPlayerInfo({ ...playerInfo, lastName: e.target.value })
+            }
           />
-          <Button
-            disabled={!firstName || !lastName}
-            className="w-full bg-[#00C2A8] hover:bg-[#00b09c] disabled:bg-[#AEAEB2] disabled:cursor-not-allowed"
-          >
+
+          <Button disabled={!playerInfo.firstName || !playerInfo.lastName} className={}>
             Start
           </Button>
         </div>
