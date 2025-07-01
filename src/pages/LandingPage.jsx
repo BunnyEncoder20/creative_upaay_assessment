@@ -1,7 +1,7 @@
-// context
+// Game Context
 import { useGame } from "@/context/GameContex";
 
-// components
+// Components
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -73,7 +73,10 @@ export default function LandingPage() {
             }
           />
 
-          <Button disabled={!playerInfo.firstName || !playerInfo.lastName} className={}>
+          <Button
+            disabled={!playerInfo.firstName || !playerInfo.lastName}
+            className="w-full bg-[#00C2A8] hover:bg-[#00b09c] disabled:bg-[#AEAEB2] disabled:cursor-not-allowed"
+          >
             Start
           </Button>
         </div>
