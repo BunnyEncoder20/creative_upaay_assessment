@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 // Game Context
 import { useGame } from "@/context/GameContex";
 
@@ -16,6 +18,7 @@ import playsGuitarImg from "@/assets/plays_guitar.png";
 // Page
 export default function LandingPage() {
   const { playerInfo, setPlayerInfo } = useGame();
+  const navigate = useNavigate();
 
   return (
     <div className="phone-wrapper">
@@ -75,6 +78,7 @@ export default function LandingPage() {
 
           <Button
             disabled={!playerInfo.firstName || !playerInfo.lastName}
+            onClick={() => navigate("/questions/0")}
             className="w-full bg-[#00C2A8] hover:bg-[#00b09c] disabled:bg-[#AEAEB2] disabled:cursor-not-allowed"
           >
             Start
