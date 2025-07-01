@@ -1,14 +1,14 @@
 export const questions = [
   {
     id: 0,
-    question: "Ready to be the mystery? Spill some fun facts about yourself...",
+    ask: "Ready to be the mystery? Spill some fun facts about yourself...",
     placeholder: "",
     image: "./assets/questions1.png",
     input: false,
   },
   {
     id: 1,
-    question: "You were born in...?",
+    ask: "You were born in...?",
     placeholder: "Your city name here",
     image: "./assets/questions2.png",
     input: true,
@@ -16,7 +16,7 @@ export const questions = [
   },
   {
     id: 2,
-    question: "What are you passionate about?",
+    ask: "What are you passionate about?",
     placeholder: "Your passion here",
     image: "./assets/questions3.png",
     input: true,
@@ -24,7 +24,7 @@ export const questions = [
   },
   //   {
   //     id: 3,
-  //     question: "What brings you joy every day?",
+  //     ask: "What brings you joy every day?",
   //     placeholder: "Describe your everyday joy",
   //     image: "./assets/questions4.png",
   //     input: true,
@@ -32,7 +32,7 @@ export const questions = [
   //   },
   //   {
   //     id: 4,
-  //     question: "What's your favorite food?",
+  //     ask: "What's your favorite food?",
   //     placeholder: "Your favorite food",
   //     image: "./assets/questions5.png",
   //     input: true,
@@ -40,7 +40,7 @@ export const questions = [
   //   },
   //   {
   //     id: 5,
-  //     question: "Which app do you can't live without?",
+  //     ask: "Which app do you can't live without?",
   //     placeholder: "Your favorite app",
   //     image: "./assets/questions6.png",
   //     input: true,
@@ -48,7 +48,7 @@ export const questions = [
   //   },
   //   {
   //     id: 6,
-  //     question: "Do you have a hidden talent?",
+  //     ask: "Do you have a hidden talent?",
   //     placeholder: "Share your hidden talent",
   //     image: "./assets/questions7.png",
   //     input: true,
@@ -56,7 +56,7 @@ export const questions = [
   //   },
   //   {
   //     id: 7,
-  //     question: "What's your motto these days?",
+  //     ask: "What's your motto these days?",
   //     placeholder: "Your present motto",
   //     image: "./assets/questions8.png",
   //     input: true,

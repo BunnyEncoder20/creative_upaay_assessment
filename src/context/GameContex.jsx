@@ -26,4 +26,5 @@ export const GameContext = createContext({
 export const useGame = () => {
   return useContext(GameContext);
 };
+
 export const GameProvider = GameContext.Provider;
