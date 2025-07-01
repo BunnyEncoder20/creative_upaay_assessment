@@ -15,8 +15,8 @@ export default function LandingPage() {
   const [lastName, setLastName] = useState("");
 
   return (
-    <div className="w-[390px] h-[844px] mx-auto shadow-xl overflow-hidden border-[10px] border-black rounded-[32px]">
-      <div className="h-1/2 bg-white p-4">
+    <div className="phone-wrapper">
+      <div className="top-half-white">
         <h1 className="text-[48px] leading-[100%] tracking-[0%] text-center font-poppins font-bold mt-4 mb-10">
           Know Who?
         </h1>
@@ -54,7 +54,7 @@ export default function LandingPage() {
           />
         </div>
       </div>
-      <div className="h-1/2 bg-[rgb(162,140,243)] p-6 flex items-center">
+      <div className="bottom-half-purple">
         <div className="bg-white w-[274px] h-[208px] rounded-[8px] gap-[16px] p-[16px] mx-auto flex flex-col justify-center">
           <Input
             placeholder="First Name"

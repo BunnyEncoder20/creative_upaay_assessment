@@ -6,9 +6,9 @@ import { GameProvider } from "@/context/GameContex";
 
 function App() {
   return (
-    <>
+    <GameProvider>
       <LandingPage />
-    </>
+    </GameProvider>
   );
 }
 
