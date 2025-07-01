@@ -1,5 +1,5 @@
 import "@/App.css";
-import LandingPage from "./components/LandingPage";
+import LandingPage from "@/pages/LandingPage";
 
 // Context provider
 import { GameProvider } from "@/context/GameContex";
