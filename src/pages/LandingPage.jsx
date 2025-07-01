@@ -79,7 +79,7 @@ export default function LandingPage() {
           <Button
             disabled={!playerInfo.firstName || !playerInfo.lastName}
             onClick={() => navigate("/questions/0")}
-            className="w-full bg-[#00C2A8] hover:bg-[#00b09c] disabled:bg-[#AEAEB2] disabled:cursor-not-allowed"
+            className="w-full bg-[#4FD1C5] hover:bg-[#00b09c] disabled:bg-[#AEAEB2] disabled:cursor-not-allowed"
           >
             Start
           </Button>

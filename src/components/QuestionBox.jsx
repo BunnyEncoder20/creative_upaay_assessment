@@ -22,7 +22,7 @@ export default function QuestionBox({
       )}
       <Button
         onClick={onSubmit}
-        className="w-full bg-[#3BD6C6] hover:bg-[#2ec0b2]"
+        className="w-full bg-[#4FD1C5] hover:bg-[#2ec0b2]"
       >
         Submit
       </Button>
