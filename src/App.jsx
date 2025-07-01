@@ -1,5 +1,8 @@
 import "@/App.css";
-import LandingPage from "@/pages/LandingPage";
+import { Routes, Route } from "react-router-dom";
+
+// pages
+import { LandingPage, QuestionPage, AcknowledgmentPage } from "@/pages";
 
 // Context provider
 import { GameProvider } from "@/context/GameContex";
@@ -7,7 +10,11 @@ import { GameProvider } from "@/context/GameContex";
 function App() {
   return (
     <GameProvider>
-      <LandingPage />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/questions/:id" element={<QuestionPage />} />
+        <Route path="/ack" element={<AcknowledgmentPage />} />
+      </Routes>
     </GameProvider>
   );
 }

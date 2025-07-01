@@ -1,30 +1,28 @@
 import { createContext, useContext, useState } from "react";
 
-export const GameContext = createContext({
-  players: [
-    {
-      id: 0,
-      firstName: "",
-      lastName: "",
-      birthCity: "",
-      passion: "",
-      everydayJoy: "",
-      favFood: "",
-      favApp: "",
-      hiddenTalent: "",
-      presentMotto: "",
-      score: 0,
-      people_who_know_you: 0,
-      people_you_know: 0,
-    },
-  ],
-  addPlayerData: (player) => {},
-  checkGuess: (player, guess) => {},
-  winner: false,
-});
+const GameContext = createContext();
 
-export const useGame = () => {
-  return useContext(GameContext);
+export const GameProvider = ({ children }) => {
+  const [playerInfo, setPlayerInfo] = useState({
+    firstName: "",
+    lastName: "",
+    birthCity: "",
+    passion: "",
+    everydayJoy: "",
+    favFood: "",
+    favApp: "",
+    hiddenTalent: "",
+    presentMotto: "",
+    score: 0,
+    people_who_know_you: 0,
+    people_you_know: 0,
+  });
+
+  return (
+    <GameContext.Provider value={{ playerInfo, setPlayerInfo }}>
+      {children}
+    </GameContext.Provider>
+  );
 };
 
-export const GameProvider = GameContext.Provider;
+export const useGame = () => useContext(GameContext);
